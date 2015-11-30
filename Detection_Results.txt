@@ -6,7 +6,7 @@ False Positives: 4
 False Negatives: 1
 
 
-Correctly Classified: 47
+Correctly Classified: 46
 
 SELECT * FROM users WHERE username='CAST('username' AS SIGNED INTEGER)' AND password=''
 
@@ -36,8 +36,6 @@ SELECT * FROM users WHERE username='admin';DROP myTable--' AND password=''
 
 SELECT * FROM Persons WHERE ROWNUM <=5;
 
-SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';
-
 SELECT sum(age) FROM student;
 
 SELECT * FROM Customers WHERE City LIKE '[bsp]%';
@@ -48,9 +46,11 @@ SELECT * FROM Customers WHERE CustomerID=1;
 
 SELECT * FROM users WHERE username='' AND password='' UNION SELECT 1, 'anotheruser', 'doesnt matter', 1-- '
 
-SELECT * FROM users WHERE username='/*!32302 1/0, */' AND password='' 
+SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';
 
 SELECT * FROM student WHERE name = ‘dan’ OR age > 25;
+
+SELECT * FROM users WHERE username='/*!32302 1/0, */' AND password=''
 
 SELECT * FROM users WHERE username='admin'--' AND password=''
 
@@ -86,8 +86,6 @@ SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City;
 SELECT column_name FROM information_schema.columns WHERE table_name = 'Users';
 
 INSERT INTO Customers (CustomerName, City, Country) VALUES ('Cardinal', 'Stavanger', 'Norway');
-
-SELECT * FROM users WHERE username='*' AND password='' 
 
 SELECT * FROM users WHERE username='' AND password='' ORDER BY 1;--'
 
