@@ -1,114 +1,64 @@
 RESULTS OF DETECTION: 
 
 True Positives: 26
-True Negatives: 21
-False Positives: 4
+True Negatives: 23
+False Positives: 2
 False Negatives: 1
 
 
-Correctly Classified: 46
-
-SELECT * FROM users WHERE username='CAST('username' AS SIGNED INTEGER)' AND password=''
-
-SELECT name FROM student WHERE age > 25;
-
-SELECT * FROM Products WHERE ProductName BETWEEN 'C' AND 'M';
-
-SELECT DISTINCT City FROM Customers;
-
-SELECT * FROM users WHERE username='admin' AND password=%27%20or%20%27%27%3D%27
-
-SELECT * FROM Customers WHERE Country='Germany' AND (City='Berlin' OR City='MÃ¼nchen');
-
-SELECT id , name , MAX(age) FROM student;
-
-SELECT * FROM users WHERE username='admin' AND password='' OR 1=1 --IamJOE'
-
-SELECT * FROM student;
-
-SELECT table_name FROM information_schema.columns WHERE column_name LIKE '%user%';
+Correctly Classified: 48
 
 SELECT * FROM users WHERE username='' + (SELECT TOP 1 username FROM users ) + '' AND password='' + (SELECT TOP 1 password FROM users ) + ''
-
-SELECT * FROM users WHERE username='' UNION SELECT SUM(columntofind) FROM users--' AND password=''
-
-SELECT * FROM users WHERE username='admin';DROP myTable--' AND password=''
-
 SELECT * FROM Persons WHERE ROWNUM <=5;
-
-SELECT sum(age) FROM student;
-
-SELECT * FROM Customers WHERE City LIKE '[bsp]%';
-
-SELECT * FROM users WHERE username='SELECT Username FROM Users WHERE ID=1' AND password='SELECT MD5(Password) FROM Users WHERE ID=1'
-
-SELECT * FROM Customers WHERE CustomerID=1;
-
-SELECT * FROM users WHERE username='' AND password='' UNION SELECT 1, 'anotheruser', 'doesnt matter', 1-- '
-
-SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';
-
-SELECT * FROM student WHERE name = â€˜danâ€™ OR age > 25;
-
-SELECT * FROM users WHERE username='/*!32302 1/0, */' AND password=''
-
-SELECT * FROM users WHERE username='admin'--' AND password=''
-
-SELECT * FROM users WHERE username='' AND users NOT IN ('First User', 'Second User');--' AND password=''
-
-SELECT * FROM users WHERE username='*' AND password=''
-
-SELECT column_name FROM information_schema.columns WHERE table_name LIKE '%user%';?
-SELECT * FROM users WHERE username='';SHUTDOWN --' AND password=''
-
+SELECT * FROM Users WHERE Username='1' OR '1' = '1' AND Password='1' OR '1' = '1'
+SELECT * FROM users WHERE username='' UNION SELECT SUM(columntofind) FROM users--' AND password=''
+SELECT id , name , MAX(age) FROM student;
 SELECT * FROM student ORDER BY age;
-
+SELECT * FROM users WHERE username='*' AND password=''
+SELECT * FROM Products WHERE ProductName BETWEEN 'C' AND 'M';
 SELECT * FROM users WHERE username='admin' AND password='' OR 1=1--'
-
+SELECT * FROM student WHERE name = ‘dan’ OR age > 25;
+SELECT * FROM users WHERE username='/*!32302 1/0, */' AND password='' 
+SELECT * FROM users WHERE username='';DROP tempTable;' AND password=''
+SELECT * FROM Customers WHERE Country='Germany' AND (City='Berlin' OR City='München');
+SELECT * FROM users WHERE username='';waitfor delay '0:0:10'--' AND password=''
+SELECT * FROM Customers WHERE City='Berlin' OR City='München';
+SELECT * FROM users WHERE username='' AND password='';IF((SELECT user) = 'sa' OR (SELECT user) = 'dbo') SELECT 1 ELSE SELECT 1/0;--'
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+SELECT * FROM users WHERE username='' AND users NOT IN ('First User', 'Second User');--' AND password=''
+SELECT * FROM student WHERE name = ‘dan’ AND age = 24;
+SELECT * FROM Customers WHERE City LIKE '[bsp]%';
+SELECT DISTINCT City FROM Customers;
+SELECT * FROM users WHERE username='';SHUTDOWN --' AND password=''
+SELECT * FROM users WHERE username='' AND password='' UNION SELECT 1, 'anotheruser', 'doesnt matter', 1-- '
 SELECT COUNT * FROM student;
-
+SELECT column_name FROM information_schema.columns WHERE table_name LIKE '%user%';?
+SELECT * FROM users WHERE username='' AND password='' ORDER BY 1;--'
+INSERT INTO Customers (CustomerName, City, Country) VALUES ('Cardinal', 'Stavanger', 'Norway');
+SELECT * FROM users WHERE username='admin';DROP myTable--' AND password=''
+SELECT * FROM Customers WHERE City IN ('Paris','London');
+SELECT table_name FROM information_schema.columns WHERE column_name = 'username';
+SELECT * FROM users WHERE username='admin' AND password=%27%20or%20%27%27%3D%27
+SELECT sum(age) FROM student;
+SELECT * FROM student;
+SELECT * FROM Customers WHERE Country LIKE '%land%';
+SELECT * FROM users WHERE username='';SELECT name FROM syscolumns WHERE id =(SELECT id FROM sysobjects WHERE name = 'known_table_name');--' AND password=''
+SELECT * FROM users WHERE username='admin' AND password='' OR 1=1 --IamJOE'
+SELECT * FROM users WHERE username='admin'--' AND password=''
+SELECT name FROM student WHERE age > 25;
+INSERT INTO student (id, name, age) VALUES ('4', 'chris', '28');
+SELECT * FROM users WHERE username='CAST('username' AS SIGNED INTEGER)' AND password=''
+SELECT table_name FROM information_schema.columns WHERE column_name LIKE '%user%';
+SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';
+SELECT column_name FROM information_schema.columns WHERE table_name = 'Users';
+SELECT * FROM users WHERE username='SELECT Username FROM Users WHERE ID=1' AND password='SELECT MD5(Password) FROM Users WHERE ID=1'
+SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City;
+SELECT * FROM users WHERE username='admin'#' AND password=''
+SELECT * FROM Customers WHERE CustomerID=1;
 SELECT CustomerName,City FROM Customers;
 
-SELECT * FROM users WHERE username='' AND password='';IF((SELECT user) = 'sa' OR (SELECT user) = 'dbo') SELECT 1 ELSE SELECT 1/0;--'
-
-SELECT table_name FROM information_schema.columns WHERE column_name = 'username';
-
-SELECT * FROM users WHERE username='';waitfor delay '0:0:10'--' AND password=''
-
-SELECT * FROM Users WHERE Username='1' OR '1' = '1' AND Password='1' OR '1' = '1'
-
-SELECT * FROM users WHERE username='admin'#' AND password=''
-
-DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
-
-SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City;
-
-SELECT column_name FROM information_schema.columns WHERE table_name = 'Users';
-
-INSERT INTO Customers (CustomerName, City, Country) VALUES ('Cardinal', 'Stavanger', 'Norway');
-
-SELECT * FROM users WHERE username='' AND password='' ORDER BY 1;--'
-
-SELECT * FROM Customers WHERE Country LIKE '%land%';
-
-SELECT * FROM users WHERE username='';SELECT name FROM syscolumns WHERE id =(SELECT id FROM sysobjects WHERE name = 'known_table_name');--' AND password=''
-
-SELECT * FROM student WHERE name = â€˜danâ€™ AND age = 24;
-
-SELECT * FROM users WHERE username='';DROP tempTable;' AND password=''
-
-SELECT * FROM Customers WHERE City IN ('Paris','London');
-
-
-Incorrectly Classified: 5
-
-SELECT * FROM Customers WHERE City='Berlin' OR City='MÃ¼nchen';â€‹
-
-UPDATE Customers SET ContactName='Alfred Schmidt', City='Hamburg' WHERE CustomerName='Alfreds Futterkiste';
-
-UPDATE Customers SET ContactName='Alfred Schmidt', City='Hamburg';
+Incorrectly Classified: 3
 
 SELECT * FROM users WHERE username='admin' AND password=' ' OR ''=''
-
-INSERT INTO student (id, name, age) VALUES (â€˜4â€™, 'chris', â€˜28â€™);
-
+UPDATE Customers SET ContactName='Alfred Schmidt', City='Hamburg';
+UPDATE Customers SET ContactName='Alfred Schmidt', City='Hamburg' WHERE CustomerName='Alfreds Futterkiste';
